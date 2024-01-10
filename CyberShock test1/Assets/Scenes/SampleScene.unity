@@ -390,8 +390,10 @@ MonoBehaviour:
     type: 3}
   colider: {fileID: 843124275}
   Enter: 000000
+  enemy: []
   maxHealth: 100
   health: 0
+  spawning: {fileID: 2001841235}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,3 +871,4 @@ MonoBehaviour:
   spawnRight: 0
   spawnLeft: 0
   spawnUP: 0
+  allArrows: []

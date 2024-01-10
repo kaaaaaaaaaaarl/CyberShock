@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class spawning : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class spawning : MonoBehaviour
     public bool spawnRight = false;
     public bool spawnLeft = false;
     public bool spawnUP = false;
+    public List<GameObject> allArrows;
 
     float timePassed = 0f;
      float _interval = 3f;
@@ -22,6 +24,7 @@ public class spawning : MonoBehaviour
                 {
                     GameObject a = Instantiate(rightPrefab) as GameObject;
                     a.transform.SetParent(this.transform);
+                    allArrows.Add(a);
                     a.transform.position = new Vector3(15f, -10f, 15f);
                     break;
                 }
@@ -29,6 +32,7 @@ public class spawning : MonoBehaviour
                 {
                     GameObject a = Instantiate(leftPrefab) as GameObject;
                     a.transform.SetParent(this.transform);
+                    allArrows.Add(a);
                     a.transform.position = new Vector3(19f, -10f, 15f);
                     break;
                     
@@ -37,6 +41,7 @@ public class spawning : MonoBehaviour
                 {
                     GameObject a = Instantiate(upPrefab) as GameObject;
                     a.transform.SetParent(this.transform);
+                    allArrows.Add(a);
                     a.transform.position = new Vector3(17f,-10f, 15f);
                     break;
 
@@ -46,6 +51,7 @@ public class spawning : MonoBehaviour
                     break;
                 }
         }
+
     }
     // Start is called before the first frame update
     void Start()
@@ -83,4 +89,11 @@ public class spawning : MonoBehaviour
         }
     }
 
+    public void DestroyLast()
+    {   if (allArrows.Last() != null)
+        {
+            Debug.Log(allArrows.Last());
+            Destroy(allArrows.Last());
+        }
+    }
     }

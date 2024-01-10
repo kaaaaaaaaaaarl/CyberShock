@@ -11,6 +11,8 @@ public class CatchButton : MonoBehaviour
     public List<GameObject> enemy = new List<GameObject>();
     public int maxHealth;
     public int health;
+    [SerializeField]
+    spawning spawning;
 
     private int score1Point, score2Point, score3Point;
     private float topColider=4.2f, bottomColider = 0.2f;
@@ -38,11 +40,12 @@ public class CatchButton : MonoBehaviour
     }
     void Update()
     {
-        if (Enter[0])
+        if (Input.GetButtonDown("Horizontal") && Input.GetAxis("Horizontal") > 0)
         {
+            if (Enter[0])
+                {
             //Debug.Log(enemy[0].transform.position.y);
-            if (Input.GetButtonDown("Horizontal") && Input.GetAxis("Horizontal") > 0)
-            {
+            
                 if (enemy[0].transform.position.y >= 3 && enemy[0].transform.position.y <= 4)
                 {
                     score += 1;
@@ -64,7 +67,8 @@ public class CatchButton : MonoBehaviour
                     }
                 }
             }
-            //enemy.Remove(enemy.FindLast());
+            Debug.Log("delete");
+            spawning.DestroyLast();
         }
     }
 
@@ -84,7 +88,6 @@ public class CatchButton : MonoBehaviour
                 
                 Debug.Log("exited collision: " + collision.gameObject.name);
                 break;
-
         }
     }
 
