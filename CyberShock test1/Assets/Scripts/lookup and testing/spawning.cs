@@ -12,7 +12,7 @@ public class spawning : MonoBehaviour
     public bool spawnLeft = false;
     public bool spawnUP = false;
 
-    float _time = 1f;
+    float timePassed = 0f;
      float _interval = 3f;
     public void spawnArrows(int position)
     {
@@ -71,5 +71,16 @@ public class spawning : MonoBehaviour
             spawnArrows(3);
             spawnUP = false;
         }
+        if (spawnTime <0.1f) {
+            spawnTime = 0.1f;
+        }
+        timePassed += Time.deltaTime;
+        if (timePassed > spawnTime)
+        {
+            //do something
+            spawnArrows(1);
+            timePassed = 0f;
+        }
     }
-}
+
+    }

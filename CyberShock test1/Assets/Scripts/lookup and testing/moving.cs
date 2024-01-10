@@ -25,7 +25,7 @@ public class moving : MonoBehaviour
         }
         if (Input.GetKeyDown("space"))
         {
-            StartCoroutine(ExampleCoroutine());
+            //StartCoroutine(ExampleCoroutine());
         }
     }
     public void EnteredTrigger()

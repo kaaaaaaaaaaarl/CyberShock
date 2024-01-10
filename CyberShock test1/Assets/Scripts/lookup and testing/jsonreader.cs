@@ -31,11 +31,13 @@ public class jsonreader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         _time += Time.deltaTime;
         while (_time >= _interval)
         {
             spriteMask.spawnArrows(1);
             _time -= _interval;
         }
+        */
     }
 }
