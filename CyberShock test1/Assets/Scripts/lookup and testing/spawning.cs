@@ -80,6 +80,7 @@ public class spawning : MonoBehaviour
         if (spawnTime <0.1f) {
             spawnTime = 0.1f;
         }
+        /*
         timePassed += Time.deltaTime;
         if (timePassed > spawnTime)
         {
@@ -87,12 +88,13 @@ public class spawning : MonoBehaviour
             spawnArrows(1);
             timePassed = 0f;
         }
+        */
     }
 
     public void DestroyLast()
     {   if (allArrows.Last() != null)
         {
-            Debug.Log(allArrows.Last());
+        //    Debug.Log(allArrows.Last());
             Destroy(allArrows.Last());
         }
     }
