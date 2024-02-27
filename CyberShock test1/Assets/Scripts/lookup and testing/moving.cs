@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class moving : MonoBehaviour
 {
-    public float speed = 5.0f;
+    public float speed = 0f;
     public GameObject pressButtonArea;
     private Rigidbody2D rb;
     private Vector2 screenBounds;
@@ -22,10 +22,6 @@ public class moving : MonoBehaviour
         if (transform.position.y > 6f)
         {
             Destroy(gameObject);
-        }
-        if (Input.GetKeyDown("space"))
-        {
-            //StartCoroutine(ExampleCoroutine());
         }
     }
     public void EnteredTrigger()

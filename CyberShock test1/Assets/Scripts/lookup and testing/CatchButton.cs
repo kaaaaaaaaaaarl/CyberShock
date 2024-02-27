@@ -7,7 +7,7 @@ public class CatchButton : MonoBehaviour
 {
   //  numbers noPoints;
     [Header("Values")]
-        public int score;
+        public int score =0;
         public int maxHealth;
         public int health;
         bool[] Enter = new bool[] { false, false, false };
@@ -94,20 +94,19 @@ public class CatchButton : MonoBehaviour
         {
             if (Enter[1])
             {
-                
                 //Debug.Log(enemy[0].transform.position.y);
             
-                if (enemy[0].transform.position.y >= 3 && enemy[0].transform.position.y <= 4)
+                if ((enemy[0].transform.position.y >= 3 && enemy[0].transform.position.y <= 4 )||
+                    (enemy[0].transform.position.y >= 1 && enemy[0].transform.position.y <= 2 )
+                )
                 {
                     score += 1;
+                    particles.GetComponent<numbers>().lowPoints();
                 }
                 else if (enemy[0].transform.position.y > 2 && enemy[0].transform.position.y < 3)
                 {
                     score += 5;
-                }
-                else if (enemy[0].transform.position.y >= 1 && enemy[0].transform.position.y <= 2)
-                {
-                    score += 1;
+                    particles.GetComponent<numbers>().highPoints();
                 }
                 else
                 {
@@ -124,34 +123,36 @@ public class CatchButton : MonoBehaviour
         }
         if (Input.GetButtonDown("Vertical") && Input.GetAxis("Vertical") < 0)
         {
+
             if (Enter[2])
             {
                 
                 //Debug.Log(enemy[0].transform.position.y);
             
-                if (enemy[0].transform.position.y >= 3 && enemy[0].transform.position.y <= 4)
+                if ((enemy[0].transform.position.y >= 3 && enemy[0].transform.position.y <= 4 )||
+                    (enemy[0].transform.position.y >= 1 && enemy[0].transform.position.y <= 2 )
+                )
                 {
                     score += 1;
+                    particles.GetComponent<numbers>().lowPoints();
                 }
                 else if (enemy[0].transform.position.y > 2 && enemy[0].transform.position.y < 3)
                 {
                     score += 5;
-                }
-                else if (enemy[0].transform.position.y >= 1 && enemy[0].transform.position.y <= 2)
-                {
-                    score += 1;
+                    particles.GetComponent<numbers>().highPoints();
                 }
                 else
                 {
                     health -= 10;
+                    particles.GetComponent<numbers>().noPoints();
                     if (health <= 0)
                     {
-                     //   Debug.Log("Lose");
+                        Debug.Log("Lose");
                     }
                 }
                 Enter[0]=false;
             }
-       //     Debug.Log("delete");
+            Debug.Log("delete");
             spawning.DestroyLast();
         }
     }
