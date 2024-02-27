@@ -14,8 +14,6 @@ public class spawning : MonoBehaviour
     public bool spawnUP = false;
     public List<GameObject> allArrows;
 
-    float timePassed = 0f;
-     float _interval = 3f;
     public void spawnArrows(int position)
     {
         switch (position)
@@ -91,11 +89,33 @@ public class spawning : MonoBehaviour
         */
     }
 
-    public void DestroyLast()
-    {   if (allArrows.Last() != null)
-        {
-        //    Debug.Log(allArrows.Last());
-            Destroy(allArrows.Last());
+    public void DestroyLast(int arrowIndex)
+        {   
+            string objNameSelect;
+            GameObject temp;
+            switch (arrowIndex)
+            { 
+                case 0:
+                    objNameSelect = "right arrow(Clone)";
+                    break;
+                case 1:
+                    objNameSelect = "left arrow(Clone)";
+                    break;
+                case 2:
+                    objNameSelect = "up arrow(Clone)";
+                    break;
+                default:
+                    objNameSelect = null;
+                    break;
+            }
+            // Debug.Log(allArrows.First(objName => objName.name.Contains(objNameSelect)));
+
+            if (allArrows.First(objName => objName.name.Contains(objNameSelect)))
+            {
+                temp = allArrows.First(objName => objName.name.Contains(objNameSelect));
+                allArrows.Remove(allArrows.First(objName => objName.name.Contains(objNameSelect)));
+
+                Destroy(temp);
+            }
         }
-    }
     }
