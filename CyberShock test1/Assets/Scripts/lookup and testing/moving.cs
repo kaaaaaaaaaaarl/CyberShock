@@ -14,6 +14,7 @@ public class moving : MonoBehaviour
     {
         rb = this.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(speed, 0);
+        Debug.Log("spawned");
     }
 
     // Update is called once per frame
@@ -23,6 +24,11 @@ public class moving : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public float TargetTime(){
+        float exactTime = 0f;
+        return exactTime;
     }
     public void EnteredTrigger()
     {

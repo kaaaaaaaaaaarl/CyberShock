@@ -10,6 +10,7 @@ public class jsonreader : MonoBehaviour
     int k = 0;
     float levelLength; 
     int[] level;
+    public float speed;
     public TextAsset textJSON;
     [System.Serializable]
 
@@ -25,7 +26,13 @@ public class jsonreader : MonoBehaviour
         public Player[] BeatMap;
     }
     public PlayerList myPLayerList = new PlayerList();
-    // Start is called before the first frame update
+
+    //Needs to calculate how fast it will need to do
+    public float GetSpeed()
+    {
+        
+        return speed;
+    }
     void Start()
     {
         myPLayerList = JsonUtility.FromJson<PlayerList>(textJSON.text);

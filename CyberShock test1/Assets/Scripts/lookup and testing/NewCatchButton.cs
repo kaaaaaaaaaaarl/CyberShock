@@ -6,11 +6,20 @@ public class NewCatchButton : MonoBehaviour
 {
     GameObject rightRay,leftRay,middleRay;
 
+    float speedValue;
     void Start(){
         rightRay = GameObject.Find("CatchRight");
         leftRay = GameObject.Find("CatchLeft");
         middleRay = GameObject.Find("CatchMiddle");
         
+    }
+    public int GetAccuracyRating(float timeDif){
+        int totalValue = 0;
+
+        
+        18f /speed
+
+        return totalValue;;
     }
     public GameObject FindArrowInLane(string direction){
         float raycastDistance = 4f;
@@ -57,12 +66,12 @@ public class NewCatchButton : MonoBehaviour
 
         if (arrowToCheck != null) 
         {
-            /*
+            
             // 2. Calculate time difference
-            float timeDiff = CalculateTimeDifference(arrowToCheck);
-
+            float timeDiff = arrowToCheck.GetComponent<OnSpawnMove>().TargetTime();
+            /*
             // 3. Determine accuracy 
-            string accuracy = GetAccuracyRating(timeDiff);
+            int accuracy = GetAccuracyRating(timeDiff);
 
             // 4. Handle feedback (this will likely be more complex)
             Debug.Log("Accuracy: " + accuracy);
@@ -80,6 +89,12 @@ public class NewCatchButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.DrawRay(rightRay.transform.position, transform.forward * 5f, Color.red);
+        float raycastDistance = 2.5f;
+        RaycastHit hit;
+        Debug.DrawRay(rightRay.transform.position, transform.forward * raycastDistance, Color.red);
+        if (Physics.Raycast(rightRay.transform.position, transform.forward, out hit, raycastDistance) || Physics.Raycast(leftRay.transform.position, transform.forward, out hit, raycastDistance) || Physics.Raycast(middleRay.transform.position, transform.forward, out hit, raycastDistance))
+        {
+            Debug.Log("land: "+Time.time);
+        }
     }
 }
