@@ -8,6 +8,9 @@ public class spawning : MonoBehaviour
     public GameObject rightPrefab;
     public GameObject leftPrefab;
     public GameObject upPrefab;
+    public GameObject parent;
+
+
     public float spawnTime = 1.0f;
     public bool spawnRight = false;
     public bool spawnLeft = false;
@@ -21,28 +24,29 @@ public class spawning : MonoBehaviour
             case 1: 
                 {
                     GameObject a = Instantiate(rightPrefab) as GameObject;
-                    a.transform.SetParent(this.transform);
+                    a.transform.SetParent(parent.transform);
                     allArrows.Add(a);
-                    a.transform.position = new Vector3(15f, -10f, 15f);
+                    a.transform.localPosition  = new Vector3(-2f, 0f, 0f); 
+                    
+                    Debug.Log(a.transform.position);
+
                     break;
                 }
             case 2: 
                 {
-                    GameObject a = Instantiate(leftPrefab) as GameObject;
-                    a.transform.SetParent(this.transform);
+                    GameObject a = Instantiate(upPrefab) as GameObject;
+                    a.transform.SetParent(parent.transform);
                     allArrows.Add(a);
-                    a.transform.position = new Vector3(19f, -10f, 15f);
+                    a.transform.localPosition  = new Vector3(0f, 0f, 0f);
                     break;
-                    
                 }
             case 3:
                 {
-                    GameObject a = Instantiate(upPrefab) as GameObject;
-                    a.transform.SetParent(this.transform);
+                    GameObject a = Instantiate(leftPrefab) as GameObject;
+                    a.transform.SetParent(parent.transform);
                     allArrows.Add(a);
-                    a.transform.position = new Vector3(17f,-10f, 15f);
+                    a.transform.localPosition  = new Vector3(2f,0f, 0f);
                     break;
-
                 }
             default:
                 {
@@ -50,11 +54,6 @@ public class spawning : MonoBehaviour
                 }
         }
 
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
     }
 
     void Update()

@@ -33,15 +33,6 @@ public class CatchButton : MonoBehaviour
         health = maxHealth;
         enemy = new GameObject[3];
 
-        //calculates the differencial of the top and bottom values with a ratio
-        //for a example [4 4 2 4 4] would be a ratio of 2, 2, 1 and differencial of 18
-
-        calRatio = (Mathf.Abs(topColider) + Mathf.Abs(bottomColider))/2;
-        ratio[0] = ratio[0]*2;
-        ratio[1] = ratio[1]*2;
-
-        calRatio = calRatio / (ratio[0]*ratio[1]*ratio[2]);
-
     }
 
     void checkLocation(int enemyIndex){
@@ -76,6 +67,7 @@ public class CatchButton : MonoBehaviour
         spawning.DestroyLast(enemyIndex);
         //enemy.Remove(null);
     }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         switch (collision.gameObject.name)

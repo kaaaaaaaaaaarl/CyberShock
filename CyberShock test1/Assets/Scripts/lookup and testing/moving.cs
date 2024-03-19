@@ -13,20 +13,20 @@ public class moving : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(0, speed);
+        rb.velocity = new Vector2(speed, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y > 6f)
+        if (transform.position.x > 6f)
         {
             Destroy(gameObject);
         }
     }
     public void EnteredTrigger()
     {
-        float size = this.gameObject.GetComponent<Renderer>().bounds.size.y;
+        float size = this.gameObject.GetComponent<Renderer>().bounds.size.x;
 
         Vector3 rescale = this.gameObject.transform.localScale;
 
