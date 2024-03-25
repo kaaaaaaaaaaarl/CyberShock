@@ -17,7 +17,7 @@ public class NewCatchButton : MonoBehaviour
         int totalValue = 0;
 
         
-        18f /speed
+        // 18f /speed;
 
         return totalValue;;
     }
