@@ -1,0 +1,186 @@
+<mxfile host="app.diagrams.net" modified="2024-03-23T18:24:33.179Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="OSVswPDwsVNmoj9lS1to" version="24.0.8" type="device">
+  <diagram name="Page-1" id="7zwPjEWaLzOKNdrfCJ5t">
+    <mxGraphModel dx="1793" dy="965" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="340" width="480" height="610" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-7" value="3D modeļi (.FBX)" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="120" y="170" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=2;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-8" target="ZkcnkoMtX4Ewwdb6D5E_-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280.0344827586207" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-8" value="Tekstūras faili (.PNG)" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="120" y="90" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=2;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-9" target="ZkcnkoMtX4Ewwdb6D5E_-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-9" value="Effekti un materiāli" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="120" y="250" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-7" target="ZkcnkoMtX4Ewwdb6D5E_-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="200.0000000000001" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-13" value="Ēnotājs (Poyomi)" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="280" y="170" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=1;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-15" target="ZkcnkoMtX4Ewwdb6D5E_-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-114" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=1;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-15" target="ZkcnkoMtX4Ewwdb6D5E_-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-15" value="Navigācijas un iestatīumu skripti (C#)" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="400" y="200" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-16" target="ZkcnkoMtX4Ewwdb6D5E_-25">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="470" y="570" />
+              <mxPoint x="470" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-16" value="Lietotāju navigācijas aina" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="430" y="480" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-23" target="ZkcnkoMtX4Ewwdb6D5E_-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-23" value="Unity Engine C# imports" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="410" y="110" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-104" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=1;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-25" target="ZkcnkoMtX4Ewwdb6D5E_-41">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="495" y="685" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-25" value="Līmeņa izvēles aina" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="420" y="580" width="100" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=1;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-35" target="ZkcnkoMtX4Ewwdb6D5E_-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=1;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-35" target="ZkcnkoMtX4Ewwdb6D5E_-25">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="688" />
+              <mxPoint x="310" y="602" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-35" value="&lt;b&gt;Līmeņu dati&lt;/b&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="130" y="642.5" width="60" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-85" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=1;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-37" target="ZkcnkoMtX4Ewwdb6D5E_-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=1;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-37" target="ZkcnkoMtX4Ewwdb6D5E_-77">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-37" value="Iestatīju navigācija" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="430" y="380" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeWidth=2;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=1;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-41" target="ZkcnkoMtX4Ewwdb6D5E_-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-41" value="Līmeņa iestatījumi" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="372.5" y="660" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-42" value="&lt;b&gt;Vizuālie elementi&amp;nbsp;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="440" y="950" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=1;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-45" target="ZkcnkoMtX4Ewwdb6D5E_-74">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=1;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-45" target="ZkcnkoMtX4Ewwdb6D5E_-77">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-45" value="Spēles aina" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#d79b00;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontStyle=1;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="362.5" y="745" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=1;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-57" target="ZkcnkoMtX4Ewwdb6D5E_-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-57" value="Visuālo elementu vadītājs" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="285" y="860" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-64" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#d79b00;strokeWidth=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontStyle=1;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="620" y="970" width="30" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-65" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#82b366;strokeWidth=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontStyle=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="620" y="990" width="30" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-67" value="- Visuālie elementi" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="650" y="960" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-68" value="- Dati un formātēšana" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="650" y="980" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-86" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=1;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-71" target="ZkcnkoMtX4Ewwdb6D5E_-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-71" value="Sākumlapas aina" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="295" y="380" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=1;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-74" target="ZkcnkoMtX4Ewwdb6D5E_-81">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-74" value="Lietotāju punkti un precizitāte" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#82b366;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontStyle=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="540" y="860" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=1;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-77" target="ZkcnkoMtX4Ewwdb6D5E_-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-77" value="Pauzes aina" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="512.5" y="745" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=1;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-81" target="ZkcnkoMtX4Ewwdb6D5E_-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-81" value="Līmeņa nobeiguma aina" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#d79b00;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontStyle=1;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="622.5" y="740" width="85" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=1;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-89" target="ZkcnkoMtX4Ewwdb6D5E_-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-89" value="&lt;b&gt;Lietotāju dati&lt;/b&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="770" y="562.5" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-90" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=1;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-74" target="ZkcnkoMtX4Ewwdb6D5E_-89">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-112" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=1;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-109" target="ZkcnkoMtX4Ewwdb6D5E_-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-109" value="Spēles funkcionālaie &lt;br&gt;skripti C#" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="90" y="850" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-110" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" source="ZkcnkoMtX4Ewwdb6D5E_-111" target="ZkcnkoMtX4Ewwdb6D5E_-109">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkcnkoMtX4Ewwdb6D5E_-111" value="Unity Engine fizikas C# imports" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="90" y="765" width="120" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
