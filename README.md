@@ -13,14 +13,13 @@ This is for adding comunity made maps and resources.
 If you want to add a custom map, go to the cybershock/assets/map-data and unzip(if needed) the map you have downloaded or created.
 ### Custom assets and textures
 You can place the unziped and properly organized and named textures in the them in the cybershock/assets/Texturepacks.
-### Mods and addons
+### Conversion mods and addons
 Follow the mod creators instructions.
 
-## Creating custom maps and texturepacks for the game
+## Creating custom mods for the game
 This is for understanding how the game understands maps, textures and their data. 
 ### Custom maps
-This contains multiple
-
+This contains multiple sections. All of the files need to be placed in a folder with the name of the map collection.
 #### JSON file formating
 - Name the json file "mapData-*Level name here*"
 - All values are stored in a BeatMap array like this {"BeatMap":[*map data here*]}
@@ -38,4 +37,10 @@ This is how you represent each beat type (long short, arrow, spacebar).
 - **5**- end of long press arrow
 - **666**- end of long press spacebar
 > **Important note** if any spacebar value is used once in a beat(for example 6040, 6020, or 6141) it will be ignored. Only if all rows are filed up with spacebar commands will it register.
-> Incase there is no end of long press notated, it will stop on the next instance of the beat getting played, but wont play the beat itself.
+> Incase there is no end of long press noted, it will stop on the next instance of the beat getting played, but wont play the beat itself.
+
+#### Custom textures per beatmap
+In the same folder you can place a folder called "customTextures" where it will use the same folder formation as a complete texturepack.
+
+### Custom texturepack
+#### File structure
