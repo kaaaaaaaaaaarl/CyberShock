@@ -30,11 +30,12 @@ This contains multiple
 > If the notation is too short it will interprete it as a 0. For example 6100, 610 and 61 will all work the same.
 
 #### JSON file values
-> This is how you represent each beat. 
+This is how you represent each beat type (long short, arrow, spacebar).
 - **1**- regular 1 press arrow
 - **222**- regular 1 press spacebar
 - **3**- start of a long arrow
 - **444**- start of a long spacebar
 - **5**- end of long press arrow
 - **666**- end of long press spacebar
-> **Important note** if any spacebar value is used once in a beat(for example 6040, or 6141) it will be ignored. Only if all rows are filed up with spacebar commands will it register.
+> **Important note** if any spacebar value is used once in a beat(for example 6040, 6020, or 6141) it will be ignored. Only if all rows are filed up with spacebar commands will it register.
+> Incase there is no end of long press notated, it will stop on the next instance of the beat getting played, but wont play the beat itself.
