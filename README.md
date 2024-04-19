@@ -19,12 +19,12 @@ Follow the mod creators instructions.
 ## Creating custom maps and texturepacks for the game
 ### Custom maps
 #### JSON file
-- Name the json file "mapData-[Level name]"
+- Name the json file "mapData-*Level name here*"
 - All values are stored in a BeatMap array like this {"BeatMap":[*map data here*]}
 - BPM represents the songs Beat Per Minute, this can be auto generated, but its highly recomended that you look at the song you are adding and its BPM.
 - level represents the dificlty and the color it will show up on in the menu
 - arrows will be 4 numbers long, the 1st one is ignored(1-9, if you type a 0 Json will not count it as a number and break), the next 3 will represent the arrows. The position of it will represent where in the lane it will appear for example 6100 will be to the left lane and 6001 will be to the right
--- if the notation is too short it will interprete it as a 0. For example 6100, 610 and 61 will all work the same.
+> if the notation is too short it will interprete it as a 0. For example 6100, 610 and 61 will all work the same.
 - the notations are:
 -- 1
 -- 2
