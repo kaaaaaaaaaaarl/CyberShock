@@ -86,6 +86,27 @@ public class NewCatchButton : MonoBehaviour
             CheckNoteAccuracy("right");
         }
     }
+    public void OnLeftKeyPressed() 
+    {
+        if (Input.GetButtonDown("Horizontal_left") && Input.GetAxis("Horizontal_left") > 0) // Check if the button was pressed 
+        {
+            CheckNoteAccuracy("left");
+        }
+    }
+    public void OnUpKeyPressed() 
+    {
+        if (Input.GetButtonDown("vertical_up") && Input.GetAxis("vertical_up") > 0) // Check if the button was pressed 
+        {
+            CheckNoteAccuracy("up");
+        }
+    }
+    public void OnSpaceKeyPressed() 
+    {
+        if (Input.GetButtonDown("jump") && Input.GetAxis("jump") > 0) // Check if the button was pressed 
+        {
+            CheckNoteAccuracy("space");
+        }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -96,5 +117,30 @@ public class NewCatchButton : MonoBehaviour
         {
             Debug.Log("land: "+Time.time);
         }
+
+        if (Input.GetButtonDown("Horizontal_right") && Input.GetAxis("Horizontal_right") > 0) // Check if the button was pressed 
+        {
+            CheckNoteAccuracy("right");
+            Debug.Log("right button");
+        }
+    
+        if (Input.GetButtonDown("Horizontal_left") && Input.GetAxis("Horizontal_left") > 0) // Check if the button was pressed 
+        {
+            CheckNoteAccuracy("left");
+            Debug.Log("left button");
+        }
+
+        if (Input.GetButtonDown("vertical_up") && Input.GetAxis("vertical_up") > 0) // Check if the button was pressed 
+        {
+            CheckNoteAccuracy("up");
+            Debug.Log("up button");
+        }
+
+        if (Input.GetButtonDown("jump") && Input.GetAxis("jump") > 0) // Check if the button was pressed 
+        {
+            CheckNoteAccuracy("space");
+            Debug.Log("space button");
+        }
+
     }
 }
