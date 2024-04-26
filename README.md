@@ -44,3 +44,7 @@ In the same folder you can place a folder called "customTextures" where it will 
 
 ### Custom texturepack
 #### File structure
+- Each texturepack should have a folder with its name. 
+- Inside of that folder there should be another 2 folders with the names "UI" and "gameplay".
+- Inside the UI there should be a "background.png" image and a "button.png" image.
+- Inside the gameplay folder there should be an image called "arrow.png", "spacebar.png" and "longArrow.png" each should be 1x1 sized and any resolution.
