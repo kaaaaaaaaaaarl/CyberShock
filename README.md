@@ -20,6 +20,10 @@ Follow the mod creators instructions.
 This is for understanding how the game understands maps, textures and their data. 
 ### Custom maps
 This contains multiple sections. All of the files need to be placed in a folder with the name of the map collection.
+
+#### Image for the menu
+- Before adding it make sure it is 1x1 size and and named image.png
+- Place it in the main song folder.
 #### JSON file formating
 - Name the json file "mapData-*Level name here*"
 - All values are stored in a BeatMap array like this {"BeatMap":[*map data here*]}
