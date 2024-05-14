@@ -12,6 +12,7 @@ public class SelectItem : MonoBehaviour
 
     public TMP_Text textHolder;
     public Image imageHolder;
+    public GameObject GameDificulty;
     void Start () 
     {
         //gets the names of each folder
@@ -36,12 +37,11 @@ public class SelectItem : MonoBehaviour
                 TMP_Text m_TextComponent;
                 m_TextComponent = newButton.transform.Find("Text (TMP)").GetComponent<TMP_Text>();
                 m_TextComponent.text = folderInfo.Name;
-                Debug.Log(folderInfo.Name+" Has bin created");
-
+                // Debug.Log(folderInfo.Name+" Has bin created");
             }
             catch (System.Exception)
             {
-                Debug.Log("Map folder cant be found");
+                //Debug.Log("Map folder cant be found");
                 throw;
             }
             //image on UI
@@ -56,13 +56,14 @@ public class SelectItem : MonoBehaviour
                 throw;
             }
             contentPrefabs.Add(newButton);
-
         }
-        
+        System.Random random = new System.Random();
+        ButtonClicked(contentPrefabs[random.Next(0, contentPrefabs.Count)]);
+
     }
     public void ButtonClicked(GameObject clickedButton)
     {
-        Debug.Log("Clicked Button Name: " + clickedButton.name);
+        // Debug.Log("Clicked Button Name: " + clickedButton.name);
         selectedButton = clickedButton;
         // Access other components or properties as needed
         Text buttonText = clickedButton.GetComponentInChildren<Text>();
@@ -73,6 +74,7 @@ public class SelectItem : MonoBehaviour
         textHolder.text = selectedButton.GetComponentInChildren<TMP_Text>().text;
         imageHolder.sprite = selectedButton.transform.Find("Image").GetComponentInChildren<Image>().sprite;
 
+        GameDificulty.GetComponent<GameDificulty>().OnChainge();
     }
     //grabs the texture
     public Texture2D LoadTexture(string filePath)

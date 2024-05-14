@@ -9,8 +9,4 @@ public class UISelect : MonoBehaviour
     public void Load(bool value){
         animator.SetBool("Selected", value);
     }
-    void Start()
-    {
-        
-    }
 }
