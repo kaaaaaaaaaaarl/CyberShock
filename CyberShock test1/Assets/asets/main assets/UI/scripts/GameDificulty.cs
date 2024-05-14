@@ -13,6 +13,7 @@ public class GameDificulty : MonoBehaviour
     public GameObject prefab;
 
     public void OnChainge(){
+        StaticObject.playableMapData = null;
         string resourcesPath = Application.dataPath + "/Resources/Map-data/"+Text.text;
         DirectoryInfo resourcesDirectory = new DirectoryInfo(resourcesPath);
         FileInfo[] files = resourcesDirectory.GetFiles();
@@ -52,6 +53,7 @@ public class GameDificulty : MonoBehaviour
                         if (data.mapData != null && data.mapData.Length > 0 && data.mapData[0].DificultyColor != null && data.mapData[0].DificultyColor.Length > 0)
                         {
                             Button.GetComponentInChildren<Image>().color= HexToColor(data.mapData[0].DificultyColor);
+                            Button.GetComponent<SelectDificultyOnClick>().ButtonFileData = textAsset;
                         }
                     }
                 }

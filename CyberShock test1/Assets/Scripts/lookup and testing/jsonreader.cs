@@ -35,6 +35,9 @@ public class jsonreader : MonoBehaviour
     }
     void Start()
     {
+        if(StaticObject.playableMapData){
+            textJSON = StaticObject.playableMapData;
+        }
         myPLayerList = JsonUtility.FromJson<PlayerList>(textJSON.text);
         _interval = 60f / myPLayerList.BeatMap[0].BPM;
         
