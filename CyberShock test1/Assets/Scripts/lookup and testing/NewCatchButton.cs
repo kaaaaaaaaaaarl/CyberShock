@@ -15,10 +15,7 @@ public class NewCatchButton : MonoBehaviour
     }
     public int GetAccuracyRating(float timeDif){
         int totalValue = 0;
-
-        
         // 18f /speed;
-
         return totalValue;;
     }
     public GameObject FindArrowInLane(string direction){
@@ -58,7 +55,7 @@ public class NewCatchButton : MonoBehaviour
         }
         
     }
-
+/*
     void CheckNoteAccuracy(string direction) 
     {
         // 1. Find the relevant arrow (using raycast, position comparison, etc.)
@@ -76,7 +73,7 @@ public class NewCatchButton : MonoBehaviour
             // 4. Handle feedback (this will likely be more complex)
             Debug.Log("Accuracy: " + accuracy);
             Destroy(arrowToCheck);
-            */
+            
         }
     }
     public void OnRightKeyPressed() 
@@ -143,4 +140,5 @@ public class NewCatchButton : MonoBehaviour
         }
 
     }
+    */
 }

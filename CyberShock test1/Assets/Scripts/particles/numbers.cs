@@ -11,7 +11,7 @@ public class numbers : MonoBehaviour
     // Start is called before the first frame update
     public void noPoints()
     {
-        Instantiate(noPointsPrefab);
+        Instantiate(noPointsPrefab, this.transform);
     }
     
     public void lowPoints()

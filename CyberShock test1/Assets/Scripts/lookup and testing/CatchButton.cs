@@ -5,6 +5,8 @@ using System.Linq;
 
 public class CatchButton : MonoBehaviour
 {
+
+    //DO NOT USE, THIS IS BROKEN, ONLY USE FOR REFERENCE AND IDEAS
   //  numbers noPoints;
     [Header("Values")]
         public int score =0;

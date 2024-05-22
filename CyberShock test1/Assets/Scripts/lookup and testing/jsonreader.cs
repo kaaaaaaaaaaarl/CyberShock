@@ -47,15 +47,7 @@ public class jsonreader : MonoBehaviour
         InvokeRepeating("ArrowLaunch", 2.0f, _interval);
 
       //  Debug.Log(levelLength);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-        
-    
+    } 
     void ArrowLaunch()
     {
         if(k<=levelLength-2){
@@ -66,7 +58,7 @@ public class jsonreader : MonoBehaviour
             for (int i = 0; i <= 3; i++)
             {
             //      Debug.Log("Induvidual: "+k+" = "+ Mathf.Floor((level[k] / Mathf.Pow(10, i)) % 10) );
-                switch (Mathf.Floor((level[k] / Mathf.Pow(10, i)) % 10))
+                switch (Mathf.Floor(level[k] / Mathf.Pow(10, i) % 10))
                 {
                     case 1:
                         spriteMask.spawnArrows(i+1);

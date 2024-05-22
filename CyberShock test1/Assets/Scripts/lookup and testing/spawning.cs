@@ -26,9 +26,9 @@ public class spawning : MonoBehaviour
                     GameObject a = Instantiate(rightPrefab) as GameObject;
                     a.transform.SetParent(parent.transform);
                     allArrows.Add(a);
-                    a.transform.localPosition  = new Vector3(-2f, 0f, 0f); 
+                    a.transform.localPosition  = new Vector3(17f, 0f, 0.02f); 
                     
-                    Debug.Log(a.transform.position);
+                  //  Debug.Log(a.transform.position);
 
                     break;
                 }
@@ -37,7 +37,7 @@ public class spawning : MonoBehaviour
                     GameObject a = Instantiate(upPrefab) as GameObject;
                     a.transform.SetParent(parent.transform);
                     allArrows.Add(a);
-                    a.transform.localPosition  = new Vector3(0f, 0f, 0f);
+                    a.transform.localPosition  = new Vector3(0f, 0f, 0.02f);
                     break;
                 }
             case 3:
@@ -45,7 +45,7 @@ public class spawning : MonoBehaviour
                     GameObject a = Instantiate(leftPrefab) as GameObject;
                     a.transform.SetParent(parent.transform);
                     allArrows.Add(a);
-                    a.transform.localPosition  = new Vector3(2f,0f, 0f);
+                    a.transform.localPosition  = new Vector3(-17f,0f, 0.02f);
                     break;
                 }
             default:

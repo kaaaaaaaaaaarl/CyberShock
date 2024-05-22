@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - particles
+  - Not Ready
+  - Ready
+  - Late
   layers:
   - Default
   - TransparentFX

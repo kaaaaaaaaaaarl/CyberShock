@@ -7,6 +7,7 @@ public class OnSpawnMove : MonoBehaviour
     public float speed; 
     public float movementDistance = 30f; 
     float spawnInTime;
+    public bool isAlive = true;
 
     private float initialZ;
 
@@ -15,7 +16,7 @@ public class OnSpawnMove : MonoBehaviour
         speed = GameObject.Find("Script holder").GetComponent<jsonreader>().GetSpeed();
         initialZ = transform.position.z;
         spawnInTime = Time.time;
-        Debug.Log("Predicted Time: "+TargetTime());
+        //Debug.Log("Predicted Time: "+TargetTime());
     }
 
     public float TargetTime(){

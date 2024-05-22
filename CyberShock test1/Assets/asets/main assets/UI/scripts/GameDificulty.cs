@@ -24,9 +24,7 @@ public class GameDificulty : MonoBehaviour
         foreach (FileInfo item in files)
         {
             if (item.Name.Contains(".json") && !item.Name.Contains(".meta")){
-                // TextAsset textJSON = new TextAsset(File.ReadAllText(item.FullName));
 
-                // string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(item.Name);
                 TextAsset textAsset = Resources.Load("Map-data/" + Text.text + "/"+item.Name.Remove(item.Name.Length-5)) as TextAsset;
                 
 
@@ -97,11 +95,6 @@ public class GameData
 
             MapData firstMapData = dataWrapper.mapData[0]; // Get the first map data entry
             Debug.Log(firstMapData);
-            // Color difficultyColor = HexToColor(firstMapData.DificultyColor);
-
-           // Debug.Log("Difficulty Color: " + difficultyColor);
-
-            // Use the 'difficultyColor' for setting material colors, etc.
             return dataWrapper.mapData[0].DificultyColor;
 
     }

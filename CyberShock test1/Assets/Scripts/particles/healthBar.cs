@@ -5,26 +5,18 @@ using TMPro;
 
 public class healthBar : MonoBehaviour
 {
-    public CatchButton CatchButton;
-    public GameObject healthBarObject;
-    public RectTransform rt;
-    [SerializeField] 
-        private TMP_Text  _title;
-    //  public var healthCount;
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
+    public TMP_Text scores;
+    public float cutPercentage = 0.4f;
 
-    // Update is called once per frame
+    public SpriteRenderer spriteRenderer;
+    public Sprite originalSprite;
     void Update()
     {
-       // healthBarObject.ReactTransform.Bottom(110 - CatchButton.health);
-        rt.offsetMin = new Vector2 (2,110- CatchButton.health);
-        _title.text =  CatchButton.score.ToString();
-
-
+        if (cutPercentage > 0f && cutPercentage < 1f)
+        {
+            spriteRenderer.drawMode = SpriteDrawMode.Tiled;
+            spriteRenderer.size = new Vector2(originalSprite.rect.width * (1f - cutPercentage), originalSprite.rect.height);
+        }
+        scores.text = MapValues.scorePoints.ToString();
     }
-        
 }
