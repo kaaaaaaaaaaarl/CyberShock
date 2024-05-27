@@ -4,10 +4,6 @@ using UnityEngine;
 
 namespace AkshayDhotre.GraphicSettingsMenu
 {
-    /// <summary>
-    /// Inherits from the Option class
-    /// This class handles the resolution options
-    /// </summary>
     public class ResolutionOption : Option
     {
         
@@ -19,10 +15,6 @@ namespace AkshayDhotre.GraphicSettingsMenu
         private void Initialize()
         {
             GenerateResolutionSubOptions();
-
-            //Assign the first element from the suboption list as the current option
-            //We check if the current suboption is null because if we load the data from the xml file, the currentsuboption will be assigned 
-            //and we don't want to reassign it.
             if (currentSubOption.name == "" && subOptionList.Count > 0)
             {
                 currentSubOptionIndex = 0;
@@ -31,25 +23,14 @@ namespace AkshayDhotre.GraphicSettingsMenu
             }
 
             UpdateSuboptionText();
-        }
-
-        /// <summary>
-        /// Applies the resolution settings
-        /// from the xml file
-        /// </summary>
-        public override void Apply()
+        }        public override void Apply()
         {
             GraphicSettingHelperMethods.ChangeResolution((int)currentSubOption.vector2Value.x, (int)currentSubOption.vector2Value.y);
         }
-
-        /// <summary>
-        /// Gets the available resolution from Screen.resolutions and creates the suboptions list containing the availables resolutions
-        /// </summary>
         private void GenerateResolutionSubOptions()
         {
             //Clear/Empty the list
             subOptionList.Clear();
-
 
             //Cycle through each resolution in Screen.resolutions and create a new suboption with the corresponding names, values and the index
             //Then add that suboption to the suboption list
@@ -64,12 +45,6 @@ namespace AkshayDhotre.GraphicSettingsMenu
                 i++;
             }
         }
-
-        /// <summary>
-        /// Goes through the list of the resolution and then finds the suboption which has value equal to the input value
-        /// and assigns that sub option as the current sub option
-        /// </summary>
-        /// <param name="v"></param>
         public void SetCurrentsuboptionByValue(Vector2 v)
         {
             if(subOptionList.Count > 0)

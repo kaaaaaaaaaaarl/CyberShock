@@ -17,20 +17,10 @@ namespace AkshayDhotre.GraphicSettingsMenu
                 UpdateSuboptionText();
             }
         }
-
-        /// <summary>
-        /// Applies the screenmode settings
-        /// </summary>
         public override void Apply()
         {
             GraphicSettingHelperMethods.ChangeScreenMode(currentSubOption.integerValue);
         }
-
-        /// <summary>
-        /// Goes through the list of the resolution and then finds the suboption which has value equal to the input value
-        /// and assigns that sub option as the current sub option
-        /// </summary>
-        /// <param name="v"></param>
         public void SetCurrentsuboptionByValue(int v)
         {
             if (subOptionList.Count > 0)
