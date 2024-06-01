@@ -8,6 +8,7 @@ public class CheckInput : MonoBehaviour
 {
     public GameObject sensor;
     public GameObject particleHolder; 
+    bool isPaused;
     //defines all the values at the begining
     void Start(){
         if(sensor){
@@ -16,6 +17,7 @@ public class CheckInput : MonoBehaviour
         if(particleHolder){
             particleHolder = GameObject.Find("particle Holder");
         }
+        Debug.Log(PlayerPrefs.GetInt("isPaused"));
     }
     //all inputs
     public void UP(InputAction.CallbackContext context){
@@ -33,28 +35,30 @@ public class CheckInput : MonoBehaviour
     }
     //shortening code:
     void OnPress(InputAction.CallbackContext context, string position){
-        string type = "singlePress";
-        if(context.performed)
-        {
-            GameObject arrow = DisregardArrows(CheckLocation(position));
-            if(arrow){
-                switch (type)
-                {
-                    case "singlePress":
-                        PointCalculator(arrow);
-                        Deleteer(arrow);
-                        break;
-                    case "longPress":
-                        PointCalculator(arrow);
-                        Deleteer(arrow);
-                        break;
-                    default:
+        if(PlayerPrefs.GetInt("isPaused") == 0){
+            string type = "singlePress";
+            if(context.performed)
+            {
+                GameObject arrow = DisregardArrows(CheckLocation(position));
+                if(arrow){
+                    switch (type)
+                    {
+                        case "singlePress":
+                            PointCalculator(arrow);
+                            Deleteer(arrow);
+                            break;
+                        case "longPress":
+                            PointCalculator(arrow);
+                            Deleteer(arrow);
+                            break;
+                        default:
 
-                    break;
+                        break;
+                    }
+                    
+                }else{
+                    particleHolder.GetComponent<numbers>().noPoints();
                 }
-                
-            }else{
-                particleHolder.GetComponent<numbers>().noPoints();
             }
         }
     }

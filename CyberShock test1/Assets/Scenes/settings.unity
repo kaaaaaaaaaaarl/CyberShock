@@ -5522,6 +5522,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 2f6962ca5bde33c43ae30f648bed0121, type: 2}
+  mainVolume: {fileID: 273050572}
+  songSider: {fileID: 2035730489}
+  SFXSlider: {fileID: 1002625792}
 --- !u!114 &7686618337139011780
 MonoBehaviour:
   m_ObjectHideFlags: 0

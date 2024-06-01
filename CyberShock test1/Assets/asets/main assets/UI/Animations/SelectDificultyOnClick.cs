@@ -5,6 +5,7 @@ using UnityEngine;
 public class SelectDificultyOnClick : MonoBehaviour
 {
     public TextAsset ButtonFileData;
+    public AudioClip mainSong;
     public bool selected;
     public void OnSelect()
     {
@@ -15,6 +16,7 @@ public class SelectDificultyOnClick : MonoBehaviour
         selected = true;
 
         StaticObject.playableMapData = ButtonFileData;
+        StaticObject.mainSong = mainSong;
         
     }
     void Update()

@@ -11,8 +11,10 @@ public class GameDificulty : MonoBehaviour
     // public Image Image;
     public TMP_Text Text;
     public GameObject prefab;
+    static AudioClip mainSong;
 
     public void OnChainge(){
+        
         StaticObject.playableMapData = null;
         string resourcesPath = Application.dataPath + "/Resources/Map-data/"+Text.text;
         DirectoryInfo resourcesDirectory = new DirectoryInfo(resourcesPath);
@@ -23,11 +25,22 @@ public class GameDificulty : MonoBehaviour
         }
         foreach (FileInfo item in files)
         {
+            //get audio source from the same directory
+            if(item.Name.Contains(".mp3") && !item.Name.Contains("meta")){
+
+                mainSong = Resources.Load<AudioClip>("Map-data/"+ Text.text +"/" + item.Name.Remove(item.Name.Length-4));
+            }else if(item.Name.Contains(".mpeg") && !item.Name.Contains("meta")){
+
+                mainSong = Resources.Load<AudioClip>("Map-data/"+ Text.text +"/" + item.Name.Remove(item.Name.Length-5));
+            }
+            //get the Json file out
             if (item.Name.Contains(".json") && !item.Name.Contains(".meta")){
 
                 TextAsset textAsset = Resources.Load("Map-data/" + Text.text + "/"+item.Name.Remove(item.Name.Length-5)) as TextAsset;
-                
 
+                //debug if the file is actually there
+                
+                /*
                 if (textAsset != null)
                 {
                     Debug.Log(textAsset);
@@ -36,26 +49,25 @@ public class GameDificulty : MonoBehaviour
                 {
                     Debug.LogError("Failed to load JSON file: "+ "Map-data/"+Text.text + "/"+item.Name);
                 }
+                */
 
                 if(item.Name.Contains("mapData"))
                 {
-                    // Debug.Log("item is: "+ item.Name);
                     GameObject Button = Instantiate(prefab, this.transform);
                     string nameOfButton = item.Name.Remove(item.Name.Length-5);
                     
                     Button.GetComponentInChildren<TMP_Text>().text = nameOfButton.Remove(0, 8);
+                    //if mapdata is found then make and add it to the dificulty button
                     if(textAsset){
-                        
                         GameData data = JsonUtility.FromJson<GameData>(textAsset.text);
-                        Debug.Log(data.mapData[0].DificultyColor);
                         if (data.mapData != null && data.mapData.Length > 0 && data.mapData[0].DificultyColor != null && data.mapData[0].DificultyColor.Length > 0)
                         {
                             Button.GetComponentInChildren<Image>().color= HexToColor(data.mapData[0].DificultyColor);
                             Button.GetComponent<SelectDificultyOnClick>().ButtonFileData = textAsset;
+                            Button.GetComponent<SelectDificultyOnClick>().mainSong = mainSong;
                         }
                     }
                 }
-            
             }
         }
     }
@@ -89,13 +101,12 @@ public class GameData
     public MapData[] mapData;
     public BeatMap[] BeatMap;
 }
-    public static String ReadJson(TextAsset mapDataJson){
+    public static String ReadJson(TextAsset mapDataJson)
+    {
         GameData dataWrapper = JsonUtility.FromJson<GameData>(mapDataJson.text);
-       
 
             MapData firstMapData = dataWrapper.mapData[0]; // Get the first map data entry
             Debug.Log(firstMapData);
             return dataWrapper.mapData[0].DificultyColor;
-
     }
 }
