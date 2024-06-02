@@ -48,11 +48,13 @@ namespace AkshayDhotre.GraphicSettingsMenu
         }
         private bool IsMenuActive()
         {
-            if (transform.root.GetComponent<Canvas>().enabled)
-            {
-                return true;
+            ;
+            if(transform.root.TryGetComponent<Canvas>(out Canvas isActiveAndEnabled)){
+                if (transform.root.GetComponent<Canvas>().enabled)
+                {
+                    return true;
+                }
             }
-
             return false;
         }
 

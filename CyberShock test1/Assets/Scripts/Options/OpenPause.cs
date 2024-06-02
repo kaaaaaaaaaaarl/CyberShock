@@ -10,7 +10,7 @@ public class OpenPause : MonoBehaviour
     public bool isPaused = false;
     void Start()
     {
-        optionsMenu = GameObject.Find("Settings");
+        optionsMenu = GameObject.Find("Pause menu");
         AudioSource = GameObject.Find("AudioSource").GetComponent<AudioSource>();
         optionsMenu.SetActive(false);
         PlayerPrefs.SetInt("isPaused", 0);

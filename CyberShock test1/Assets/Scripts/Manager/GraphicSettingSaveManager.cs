@@ -4,10 +4,6 @@ using UnityEngine;
 
 namespace AkshayDhotre.GraphicSettingsMenu
 {
-    /// <summary>
-    /// Handles the saving and loading of the graphic settings
-    /// The data is saved when the apply button is pressed and loaded when the game starts
-    /// </summary>
     public class GraphicSettingSaveManager : MonoBehaviour
     {
         [Tooltip("If kept empty, file will be stored in Application.persistentDataPath. Include / at the end")]
@@ -34,7 +30,7 @@ namespace AkshayDhotre.GraphicSettingsMenu
 
             if(fileName == "")
             {
-                fileName = "MyGraphicSettings.xml";
+                fileName = "Settings.xml";
             }
 
             //Initialize the default data container
@@ -44,32 +40,15 @@ namespace AkshayDhotre.GraphicSettingsMenu
             defaultDataContainer.qualityLevel = 0;
 
         }
-
-        /// <summary>
-        /// Save the settings using the XmlManager
-        /// </summary>
-        /// <param name="dataToSave"></param>
         public void SaveSettings(GraphicSettingDataContainer dataToSave)
         {
             XmlManager<GraphicSettingDataContainer>.Save(dataToSave, filePath, fileName);
         }
-
-        /// <summary>
-        /// Check if the file exists, if yes the it is assigned to dataToLoad
-        /// else defaultDataContainer is assigned to dataToLoad and then saved to create the file
-        /// </summary>
-        /// <param name="dataToLoad"></param>
         public void LoadSettings(out GraphicSettingDataContainer dataToLoad)
         {
             GraphicSettingDataContainer tempData = XmlManager<GraphicSettingDataContainer>.Load(filePath + fileName, new GraphicSettingDataContainer());
             dataToLoad = tempData;
         }
-
-
-        /// <summary>
-        /// Check if the file exists
-        /// </summary>
-        /// <returns></returns>
         public bool FileExists()
         {
             if (XmlManager<GraphicSettingDataContainer>.FileExists(filePath + fileName))

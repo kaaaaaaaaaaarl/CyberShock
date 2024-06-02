@@ -5,9 +5,6 @@ using UnityEngine;
 namespace AkshayDhotre.GraphicSettingsMenu
 {
     [RequireComponent(typeof(GraphicSettingSaveManager))]
-    /// <summary>
-    /// Handles the toggling of menu and the saving/loading and applying of the graphic settings.
-    /// </summary>
     public class GraphicMenuManager : MonoBehaviour
     {
         //Reference to the options in the scene
@@ -28,10 +25,6 @@ namespace AkshayDhotre.GraphicSettingsMenu
         {
 
             graphicSettingSaveManager = GetComponent<GraphicSettingSaveManager>();
-
-            //It is necessary to load the data in Start() rather than in Awake() because we generate the resolution suboption list
-            //and the quality level suboption list in the awake function. So if we call this function in awake and apply the settings
-            //the fallback suboption settings will be applied.
 
             if(graphicSettingSaveManager.FileExists())
             {
@@ -54,18 +47,10 @@ namespace AkshayDhotre.GraphicSettingsMenu
                 ApplySettings();
             }
         }
-
-        /// <summary>
-        /// Called when the UI apply button is pressed
-        /// </summary>
         public void OnApplyButtonPress()
         {
             ApplySettings();
         }
-
-        /// <summary>
-        /// Applies the settings and saves the new settings
-        /// </summary>
         private void ApplySettings()
         {
             
@@ -76,10 +61,6 @@ namespace AkshayDhotre.GraphicSettingsMenu
 
             Save();
         }
-
-        /// <summary>
-        /// Get the values from the option, assign them in the GraphicSettingDataContainer and saves the data into a XML file
-        /// </summary>
         public void Save()
         {
             //Assign values to dataToSave

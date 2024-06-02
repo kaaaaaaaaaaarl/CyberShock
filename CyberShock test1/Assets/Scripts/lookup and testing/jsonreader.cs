@@ -18,6 +18,7 @@ public class jsonreader : MonoBehaviour
     public class Player
     {
         public int BPM;
+        public int speed;
         public int[] arrows;
     }
     [System.Serializable]
@@ -40,7 +41,8 @@ public class jsonreader : MonoBehaviour
         }
         myPLayerList = JsonUtility.FromJson<PlayerList>(textJSON.text);
         _interval = 60f / myPLayerList.BeatMap[0].BPM;
-        
+        speed = myPLayerList.BeatMap[0].speed;
+
         levelLength = myPLayerList.BeatMap[0].arrows.Length;
         level = myPLayerList.BeatMap[0].arrows;
 

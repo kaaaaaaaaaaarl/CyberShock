@@ -770,10 +770,10 @@ RectTransform:
   m_Father: {fileID: 2097251174}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 117.42145, y: 46.316673}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &306053796
 MonoBehaviour:
@@ -795,12 +795,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: 60ddad8c262c35c4cb5ffca305348fbb, type: 3}
+    m_FontSize: 27
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2144,9 +2144,9 @@ RectTransform:
   m_Father: {fileID: 7686618336881614276}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000044345, y: -199.06}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0.000013827423, y: 40.936394}
   m_SizeDelta: {x: 640, y: 81.87279}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1318630045
@@ -3184,7 +3184,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 48, y: 9}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 142.0487, y: 65}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2097251175
@@ -4947,8 +4947,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: 60ddad8c262c35c4cb5ffca305348fbb, type: 3}
+    m_FontSize: 27
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -4974,10 +4974,10 @@ RectTransform:
   m_Father: {fileID: 7686618335942921956}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 120.3411, y: 45.067383}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7686618335692729401
 GameObject:
@@ -5172,7 +5172,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -34.299988, y: -23.499985}
+  m_AnchoredPosition: {x: 0, y: -32.5}
   m_SizeDelta: {x: 142.0487, y: 65}
   m_Pivot: {x: 1, y: 0}
 --- !u!1 &7686618335942921957
@@ -5454,8 +5454,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20c469b2b1c274743bee9fa314ba88bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filePath: D:/MyNewGame/
-  fileName: MySettingsExampleScene.xml
+  filePath: C:/Games/Cybershock
+  fileName: Settings.xml
 --- !u!114 &7686618336881614281
 MonoBehaviour:
   m_ObjectHideFlags: 0

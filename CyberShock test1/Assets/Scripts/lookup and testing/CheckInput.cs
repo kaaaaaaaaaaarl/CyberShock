@@ -15,50 +15,68 @@ public class CheckInput : MonoBehaviour
             sensor = gameObject;
         }
         if(particleHolder){
-            particleHolder = GameObject.Find("particle Holder");
+            particleHolder = GameObject.Find("Particle Holder");
         }
         Debug.Log(PlayerPrefs.GetInt("isPaused"));
     }
     //all inputs
+    /*
     public void UP(InputAction.CallbackContext context){
         OnPress(context, "up");
+        Debug.Log("up");
     }
     public void Space(InputAction.CallbackContext context){
         OnPress(context, "space");
+        Debug.Log("space");
     }
     public void Right(InputAction.CallbackContext context){
         OnPress(context, "right");
+        Debug.Log("right");
         
     }
     public void Left(InputAction.CallbackContext context){
         OnPress(context, "left");
+        Debug.Log("left");
+    }
+    */
+    void Update(){
+        if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)){
+            OnPress("up");
+        }
+        if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)){
+            OnPress("left");
+        }
+        if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)){
+            OnPress("right");
+        }
+        if(Input.GetKeyDown(KeyCode.Space)){
+            OnPress("space");
+        }
     }
     //shortening code:
-    void OnPress(InputAction.CallbackContext context, string position){
+    void OnPress(string position){
         if(PlayerPrefs.GetInt("isPaused") == 0){
-            string type = "singlePress";
-            if(context.performed)
-            {
-                GameObject arrow = DisregardArrows(CheckLocation(position));
-                if(arrow){
-                    switch (type)
-                    {
-                        case "singlePress":
-                            PointCalculator(arrow);
-                            Deleteer(arrow);
-                            break;
-                        case "longPress":
-                            PointCalculator(arrow);
-                            Deleteer(arrow);
-                            break;
-                        default:
 
+            string type = "singlePress";
+            GameObject arrow = DisregardArrows(CheckLocation(position));
+            if(arrow){
+                switch (type)
+                {
+                    case "singlePress":
+                        PointCalculator(arrow);
+                        Deleteer(arrow);
                         break;
-                    }
-                    
-                }else{
-                    particleHolder.GetComponent<numbers>().noPoints();
+                    case "longPress":
+                        PointCalculator(arrow);
+                        Deleteer(arrow);
+                        break;
+                    default:
+
+                    break;
                 }
+                
+            }else{
+                particleHolder.GetComponent<numbers>().noPoints();
             }
         }
     }
@@ -121,11 +139,11 @@ public class CheckInput : MonoBehaviour
         {
             MapValues.scorePoints += 100;
             particleHolder.GetComponent<numbers>().lowPoints();
-        }else if(Math.Abs(distance) >=0.6 && Math.Abs(distance) <=1.2)
+        }else if(Math.Abs(distance) >=0.3 && Math.Abs(distance) <=1)
         {
             MapValues.scorePoints += 200;
             particleHolder.GetComponent<numbers>().midPoints();
-        }else if(Math.Abs(distance) >=0 && Math.Abs(distance) <=0.6)
+        }else if(Math.Abs(distance) >=0 && Math.Abs(distance) <=0.3)
         {
             MapValues.scorePoints += 300;
             particleHolder.GetComponent<numbers>().highPoints();

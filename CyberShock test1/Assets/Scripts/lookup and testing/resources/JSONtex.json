@@ -2,6 +2,7 @@
   "BeatMap": [
     {
       "BPM": 120,
+      "speed": 10,
       "arrows": 
       [
         6111,
