@@ -14,7 +14,6 @@ public class jsonreader : MonoBehaviour
     public TextAsset textJSON;
     [System.Serializable]
 
-
     public class Player
     {
         public int BPM;
@@ -31,7 +30,6 @@ public class jsonreader : MonoBehaviour
     //Needs to calculate how fast it will need to do
     public float GetSpeed()
     {
-        
         return speed;
     }
     void Start()
@@ -50,13 +48,19 @@ public class jsonreader : MonoBehaviour
 
       //  Debug.Log(levelLength);
     } 
+    public bool isEnded(){
+        if(k >= levelLength-1)
+        {
+            return true;
+        }
+        return false;
+    }
     void ArrowLaunch()
     {
         if(k<=levelLength-2){
             k++;
             curStage = level[k];
             //   Debug.Log("level: "+level[k]);
-
             for (int i = 0; i <= 3; i++)
             {
             //      Debug.Log("Induvidual: "+k+" = "+ Mathf.Floor((level[k] / Mathf.Pow(10, i)) % 10) );

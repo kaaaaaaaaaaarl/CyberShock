@@ -22,5 +22,6 @@ public class SelectDificultyOnClick : MonoBehaviour
     void Update()
     {
         transform.Find("Image").gameObject.SetActive(selected);
+
     }
 }

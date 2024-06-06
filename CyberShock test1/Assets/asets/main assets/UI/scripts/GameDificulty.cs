@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -12,6 +12,7 @@ public class GameDificulty : MonoBehaviour
     public TMP_Text Text;
     public GameObject prefab;
     static AudioClip mainSong;
+    public Image playButtonimage;
 
     public void OnChainge(){
         
@@ -65,6 +66,7 @@ public class GameDificulty : MonoBehaviour
                             Button.GetComponentInChildren<Image>().color= HexToColor(data.mapData[0].DificultyColor);
                             Button.GetComponent<SelectDificultyOnClick>().ButtonFileData = textAsset;
                             Button.GetComponent<SelectDificultyOnClick>().mainSong = mainSong;
+                            StaticObject.songName = Text.text;
                         }
                     }
                 }
@@ -82,7 +84,8 @@ public class GameDificulty : MonoBehaviour
 
         return color;
     }
-    [System.Serializable]
+    
+[System.Serializable]
 public class MapData
 {
     public string DificultyColor;
@@ -106,7 +109,7 @@ public class GameData
         GameData dataWrapper = JsonUtility.FromJson<GameData>(mapDataJson.text);
 
             MapData firstMapData = dataWrapper.mapData[0]; // Get the first map data entry
-            Debug.Log(firstMapData);
+          //  Debug.Log(firstMapData);
             return dataWrapper.mapData[0].DificultyColor;
     }
 }

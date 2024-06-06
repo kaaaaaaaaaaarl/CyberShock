@@ -10,13 +10,17 @@ public class DitectWhenButtonAvailable : MonoBehaviour
     public GameObject particleHolder;
     private void OnTriggerEnter(Collider other)
     {
-        if (!colliders.Contains(other)) { colliders.Add(other); }
+        if (!colliders.Contains(other)) 
+        { 
+            colliders.Add(other); 
+        }
     }
     
     private void OnTriggerExit(Collider other)
     {
         Collider temp = other;
         colliders.Remove(temp);
+        MapValues.damageTaken = MapValues.damageTaken + 0.15f;
         Destroy(temp.gameObject);
         particleHolder.GetComponent<numbers>().noPoints();
         

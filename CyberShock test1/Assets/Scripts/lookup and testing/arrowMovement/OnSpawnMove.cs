@@ -16,7 +16,6 @@ public class OnSpawnMove : MonoBehaviour
         speed = GameObject.Find("Script holder").GetComponent<jsonreader>().GetSpeed();
         initialZ = transform.position.z;
         spawnInTime = Time.time;
-        //Debug.Log("Predicted Time: "+TargetTime());
     }
 
     public float TargetTime(){
@@ -31,6 +30,8 @@ public class OnSpawnMove : MonoBehaviour
         // Check if distance limit has been reached
         if (Mathf.Abs(transform.position.z - initialZ) >= movementDistance)
         {
+            //health thing:
+            MapValues.damageTaken = MapValues.damageTaken + 0.15f;
             Destroy(gameObject);
         }
     }

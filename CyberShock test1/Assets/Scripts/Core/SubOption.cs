@@ -4,11 +4,6 @@ using UnityEngine;
 
 namespace AkshayDhotre.GraphicSettingsMenu
 {
-    /// <summary>
-    /// Contains the name of the subOption and its value
-    /// For example : The option of Resolution will contain suboptions with
-    /// vector2 values like (1920,1080) and name as "1920x1080"
-    /// </summary>
     [System.Serializable]
     public class SubOption
     {
@@ -19,7 +14,7 @@ namespace AkshayDhotre.GraphicSettingsMenu
         public int integerValue = 0;
 
         [Tooltip("The index value of this option in the suboption list, created in option class")]
-        public int indexInList;//Will be used when loading the data from the xml file
+        public int indexInList;
 
 
         [Tooltip("The vector2 value specially for the resolution")]

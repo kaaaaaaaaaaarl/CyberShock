@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 namespace AkshayDhotre.GraphicSettingsMenu
@@ -11,6 +12,7 @@ namespace AkshayDhotre.GraphicSettingsMenu
         public ResolutionOption resolutionOption;
         public ScreenmodeOption screenmodeOption;
         public QualityLevelOption qualityLevelOption;
+        public GameObject closeMenu;
 
         [Tooltip("The button on keyboard which when pressed will apply the graphic settings")]
         public KeyCode keyboardApplySettingsKey = KeyCode.Return;
@@ -36,6 +38,9 @@ namespace AkshayDhotre.GraphicSettingsMenu
             {
                 Debug.Log("New Save file Created!");
                 Save();
+            }
+            if(closeMenu){
+                closeMenu.SetActive(false);
             }
             
         }
@@ -71,18 +76,10 @@ namespace AkshayDhotre.GraphicSettingsMenu
 
             graphicSettingSaveManager.SaveSettings(dataToSave);
         }
-
-        /// <summary>
-        /// Load the settings in dataToLoad(graphicSettingsDataContainer)
-        /// </summary>
         public void Load()
         {
             graphicSettingSaveManager.LoadSettings(out dataToLoad);
         }
-
-        /// <summary>
-        /// Updates the UI suboption text and also sets the currentSubOption equal to the value from the loaded data
-        /// </summary>
         private void UpdateUIFromLoadedData()
         {
             //so that the player will see the current settings on the menu

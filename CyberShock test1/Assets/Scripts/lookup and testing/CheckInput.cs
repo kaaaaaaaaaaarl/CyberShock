@@ -11,6 +11,7 @@ public class CheckInput : MonoBehaviour
     bool isPaused;
     //defines all the values at the begining
     void Start(){
+        MapValues.damageTaken = 0f;
         if(sensor){
             sensor = gameObject;
         }
@@ -137,6 +138,7 @@ public class CheckInput : MonoBehaviour
         float distance = transform.position.z - obj.transform.position.z;
         if (Math.Abs(distance) >=1.2)
         {
+            MapValues.damageTaken = MapValues.damageTaken+ 0.05f;
             MapValues.scorePoints += 100;
             particleHolder.GetComponent<numbers>().lowPoints();
         }else if(Math.Abs(distance) >=0.3 && Math.Abs(distance) <=1)
@@ -146,6 +148,10 @@ public class CheckInput : MonoBehaviour
         }else if(Math.Abs(distance) >=0 && Math.Abs(distance) <=0.3)
         {
             MapValues.scorePoints += 300;
+            if(MapValues.damageTaken >0){
+                MapValues.damageTaken = MapValues.damageTaken- 0.05f;
+            }
+            
             particleHolder.GetComponent<numbers>().highPoints();
         }
     }

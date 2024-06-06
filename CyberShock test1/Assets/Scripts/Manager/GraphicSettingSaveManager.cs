@@ -9,7 +9,7 @@ namespace AkshayDhotre.GraphicSettingsMenu
         [Tooltip("If kept empty, file will be stored in Application.persistentDataPath. Include / at the end")]
         public string filePath;
 
-        [Tooltip("if kept empty, file name will be MyGraphicSettings.xml")]
+        [Tooltip("if kept empty, file name will be Settings.xml")]
         public string fileName;
 
         //Use this when there is error in loading the saved data

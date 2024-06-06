@@ -14,7 +14,7 @@ public class MusicController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = StaticObject.mainSong;
         
-        Invoke("StartMusic", 2.0f + delay);
+      //  Invoke("StartMusic", 2.0f + delay);
     }
     public void StartMusic(){
         if(audioSource.clip){
