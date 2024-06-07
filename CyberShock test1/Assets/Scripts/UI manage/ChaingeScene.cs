@@ -8,17 +8,6 @@ public class ChaingeScene : MonoBehaviour
     public string sceneName;
     public string sceneName1;
     public string sceneName2;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void ChaingeScenes()
     {
         SceneManager.LoadScene(sceneName);

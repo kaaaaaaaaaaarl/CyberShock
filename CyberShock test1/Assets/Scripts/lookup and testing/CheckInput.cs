@@ -24,25 +24,6 @@ public class CheckInput : MonoBehaviour
         Debug.Log(PlayerPrefs.GetInt("isPaused"));
     }
     //all inputs
-    /*
-    public void UP(InputAction.CallbackContext context){
-        OnPress(context, "up");
-        Debug.Log("up");
-    }
-    public void Space(InputAction.CallbackContext context){
-        OnPress(context, "space");
-        Debug.Log("space");
-    }
-    public void Right(InputAction.CallbackContext context){
-        OnPress(context, "right");
-        Debug.Log("right");
-        
-    }
-    public void Left(InputAction.CallbackContext context){
-        OnPress(context, "left");
-        Debug.Log("left");
-    }
-    */
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
@@ -93,9 +74,6 @@ public class CheckInput : MonoBehaviour
             }
         }
     }
-
-    //==============================================================================================================
-
     //Remove from list and remove from world at the same time
     void Deleteer(GameObject obj)
     {

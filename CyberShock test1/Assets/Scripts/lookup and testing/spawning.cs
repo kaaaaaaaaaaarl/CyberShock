@@ -29,9 +29,6 @@ public class spawning : MonoBehaviour
                     a.transform.SetParent(parent.transform);
                     allArrows.Add(a);
                     a.transform.localPosition  = new Vector3(17f, 0f, 0.02f); 
-                    
-                  //  Debug.Log(a.transform.position);
-
                     break;
                 }
             case 2: 

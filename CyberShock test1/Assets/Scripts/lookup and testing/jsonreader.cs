@@ -45,8 +45,6 @@ public class jsonreader : MonoBehaviour
         level = myPLayerList.BeatMap[0].arrows;
 
         InvokeRepeating("ArrowLaunch", 2.0f, _interval);
-
-      //  Debug.Log(levelLength);
     } 
     public bool isEnded(){
         if(k >= levelLength-1)
@@ -60,10 +58,8 @@ public class jsonreader : MonoBehaviour
         if(k<=levelLength-2){
             k++;
             curStage = level[k];
-            //   Debug.Log("level: "+level[k]);
             for (int i = 0; i <= 3; i++)
             {
-            //      Debug.Log("Induvidual: "+k+" = "+ Mathf.Floor((level[k] / Mathf.Pow(10, i)) % 10) );
                 switch (Mathf.Floor(level[k] / Mathf.Pow(10, i) % 10))
                 {
                     case 1:
