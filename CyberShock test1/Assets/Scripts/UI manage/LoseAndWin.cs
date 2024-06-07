@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.UIElements;
 using static GameDificulty;
 
 public class LoseAndWin : MonoBehaviour
@@ -13,7 +14,6 @@ public class LoseAndWin : MonoBehaviour
     public GameObject youWon;
     public jsonreader reader;
     public OpenPause pauseController;
-    public bool useEncryption = false;
     
     private readonly string encryptionCodeWord = "word";
     private TextAsset textAsset = null;
@@ -21,9 +21,9 @@ public class LoseAndWin : MonoBehaviour
     private string filepath;
     void Start()
     {
+
         filepath = Application.dataPath+"/Resources/map-data/"+StaticObject.songName+"/scores.json";
         Debug.Log(File.Exists(filepath));
-        MakeFile();
         AudioSource = GameObject.Find("AudioSource").GetComponent<AudioSource>();
         if(!youLost){
             youLost = GameObject.Find("Game over");
@@ -57,65 +57,27 @@ public class LoseAndWin : MonoBehaviour
         //saving the score
         if(!hasSaved && reader.isEnded() && MapValues.damageTaken <= 1 && PlayerPrefs.GetInt("isPaused") !=1){
             //check if the file exists or nah
-            MakeFile();
-            
             //a fucking mess:
-            try 
-            {
-               // Directory.CreateDirectory(Path.GetDirectoryName(filepath));
+            MakeFile();
+            SaveToJson(ReadAsString());
 
-                /*
-                string dataToStore = JsonUtility.ToJson(data, true);
-                if (useEncryption) 
-                {
-                    dataToStore = EncryptDecrypt(dataToStore);
-                }
-                */
-            }
-            catch (Exception e) 
-            {
-                Debug.LogError("Error occured when trying to save data to file: " + filepath + "\n" + e);
-            }
-/*
-            //make new scores if does not exist
-            if(!File.Exists("C:/Games/Cybershock/map-data/"))
-            {
-                System.IO.Directory.CreateDirectory("C:/Games/Cybershock/map-data/");
-              //  File.Create("C:/Games/Cybershock/map-data/");
-            }
-            if(!File.Exists("C:/Games/Cybershock/map-data/"+StaticObject.songName)){
-                resourcesDirectory = new DirectoryInfo("C:/Games/Cybershock/map-data/");
-                File.Create(resourcesDirectory.ToString()+StaticObject.songName+ ".json");
-                File.WriteAllText(resourcesDirectory.ToString()+StaticObject.songName+ ".json", "{\"Scores\": []}");
-            }
-
-            //add the score to the list:
-            ScoreData dataWrapper = JsonUtility.FromJson<ScoreData>(
-                File.ReadAllText("Resources/"+ StaticObject.songName+ "scores.json")
-            );
-            WriteScore(dataWrapper, resourcesDirectory.ToString()+"/map-data/"+StaticObject.songName);
-            //to make sure this does not run 2 times in a row:
             hasSaved = true;
-            */
         }
         
     }
-    void WriteScore(ScoreData dataWrapper, string dir)
+    private static string Base64Encode(string plainText) 
     {
-        File.WriteAllText(dir, 
-            (dataWrapper.Scores[dataWrapper.Scores.Length] = MapValues.scorePoints).ToString()
-        );
+        var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
+        return System.Convert.ToBase64String(plainTextBytes);
     }
-    private string EncryptDecrypt(string data) 
+    private static string Base64Decode(string base64EncodedData) 
     {
-        string modifiedData = "";
-        for (int i = 0; i < data.Length; i++) 
-        {
-            modifiedData += (char) (data[i] ^ encryptionCodeWord[i % encryptionCodeWord.Length]);
-        }
-        return modifiedData;
+        var base64EncodedBytes = System.Convert.FromBase64String(base64EncodedData);
+        return System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
     }
-    private void MakeFile(){
+    
+    private void MakeFile()
+    {
         try
         {
             if(!File.Exists(filepath))
@@ -183,6 +145,24 @@ public class LoseAndWin : MonoBehaviour
             throw;
         }
         return returnString;
+    }
+    void SaveToJson(string str)
+    {
+        ScoreData dataWrapp = JsonUtility.FromJson<ScoreData>(str);
+        List<int> addingAValueList = new List<int>(dataWrapp.Scores);
+        addingAValueList.Add(MapValues.scorePoints);
+
+        //make it back in to a json format after you scrushed it all up
+        ScoreData newValues  = new ScoreData();
+        newValues.Scores = addingAValueList.ToArray();
+
+        string jsonToSave = JsonUtility.ToJson(newValues, true);
+        foreach (var item in addingAValueList)
+        {
+            Debug.Log("item in arr: "+item);
+        }
+        Debug.Log(jsonToSave);
+        WriteToFile(jsonToSave);
     }
 }
 

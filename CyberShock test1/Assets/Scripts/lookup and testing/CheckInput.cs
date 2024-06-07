@@ -10,12 +10,15 @@ public class CheckInput : MonoBehaviour
     public GameObject particleHolder; 
     bool isPaused;
     //defines all the values at the begining
-    void Start(){
+    void Start()
+    {
         MapValues.damageTaken = 0f;
-        if(sensor){
+        if(sensor)
+        {
             sensor = gameObject;
         }
-        if(particleHolder){
+        if(particleHolder)
+        {
             particleHolder = GameObject.Find("Particle Holder");
         }
         Debug.Log(PlayerPrefs.GetInt("isPaused"));
@@ -40,27 +43,35 @@ public class CheckInput : MonoBehaviour
         Debug.Log("left");
     }
     */
-    void Update(){
-        if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)){
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        {
             OnPress("up");
         }
-        if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)){
+        if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+        {
             OnPress("left");
         }
-        if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)){
+        if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+        {
             OnPress("right");
         }
-        if(Input.GetKeyDown(KeyCode.Space)){
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
             OnPress("space");
         }
     }
     //shortening code:
-    void OnPress(string position){
-        if(PlayerPrefs.GetInt("isPaused") == 0){
+    void OnPress(string position)
+    {
+        if(PlayerPrefs.GetInt("isPaused") == 0)
+        {
 
             string type = "singlePress";
             GameObject arrow = DisregardArrows(CheckLocation(position));
-            if(arrow){
+            if(arrow)
+            {
                 switch (type)
                 {
                     case "singlePress":
@@ -76,7 +87,8 @@ public class CheckInput : MonoBehaviour
                     break;
                 }
                 
-            }else{
+            }else
+            {
                 particleHolder.GetComponent<numbers>().noPoints();
             }
         }
@@ -85,14 +97,16 @@ public class CheckInput : MonoBehaviour
     //==============================================================================================================
 
     //Remove from list and remove from world at the same time
-    void Deleteer(GameObject obj){
+    void Deleteer(GameObject obj)
+    {
         Collider tempp = obj.GetComponent<Collider>();
         gameObject.GetComponent<DitectWhenButtonAvailable>().RemoveColider(tempp);
         UnityEngine.Object.Destroy(obj);
     }
 
     //Check if the direction is correct
-    private List<GameObject> CheckLocation(string direction){
+    private List<GameObject> CheckLocation(string direction)
+    {
         List<GameObject> available = new List<GameObject>();
         List<Collider> coliders = sensor.GetComponent<DitectWhenButtonAvailable>().GetColliders();
 
@@ -101,7 +115,6 @@ public class CheckInput : MonoBehaviour
             if(colider.gameObject.GetComponent<ArrowType>().directon == direction)
             {
                 available.Add(colider.gameObject);
-                
             }
         }
         return available;
@@ -124,7 +137,8 @@ public class CheckInput : MonoBehaviour
                 availableBTN = obj;
             }else // Change the tag of non-closest objects
             {
-                if(obj.transform.position.y < transform.position.y){
+                if(obj.transform.position.y < transform.position.y)
+                {
                     obj.tag = "Late";
                 }
             }
@@ -133,7 +147,8 @@ public class CheckInput : MonoBehaviour
     }
     
     //Determine how many points the click was worth
-    private void PointCalculator(GameObject obj){
+    private void PointCalculator(GameObject obj)
+    {
         //math aka meth
         float distance = transform.position.z - obj.transform.position.z;
         if (Math.Abs(distance) >=1.2)
@@ -148,7 +163,8 @@ public class CheckInput : MonoBehaviour
         }else if(Math.Abs(distance) >=0 && Math.Abs(distance) <=0.3)
         {
             MapValues.scorePoints += 300;
-            if(MapValues.damageTaken >0){
+            if(MapValues.damageTaken >0)
+            {
                 MapValues.damageTaken = MapValues.damageTaken- 0.05f;
             }
             

@@ -69,7 +69,12 @@ public class jsonreader : MonoBehaviour
                     case 1:
                         spriteMask.spawnArrows(i+1);
                         break;
+                    case 2:
+                        spriteMask.spawnArrows(4);
+                        i = 3;
+                        break;
                     default:
+                    
                     break;
                 }
             }

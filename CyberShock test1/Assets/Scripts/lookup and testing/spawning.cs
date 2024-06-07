@@ -8,6 +8,7 @@ public class spawning : MonoBehaviour
     public GameObject rightPrefab;
     public GameObject leftPrefab;
     public GameObject upPrefab;
+    public GameObject spacePrefab;
     public GameObject parent;
 
 
@@ -15,6 +16,7 @@ public class spawning : MonoBehaviour
     public bool spawnRight = false;
     public bool spawnLeft = false;
     public bool spawnUP = false;
+    public bool spawnSpace = false;
     public List<GameObject> allArrows;
 
     public void spawnArrows(int position)
@@ -48,6 +50,14 @@ public class spawning : MonoBehaviour
                     a.transform.localPosition  = new Vector3(-17f,0f, 0.02f);
                     break;
                 }
+            case 4:
+                {
+                    GameObject a = Instantiate(spacePrefab) as GameObject;
+                    a.transform.SetParent(parent.transform);
+                    allArrows.Add(a);
+                    a.transform.localPosition  = new Vector3(0f, 0f, 0.02f);
+                    break;
+                }
             default:
                 {
                     break;
@@ -73,6 +83,11 @@ public class spawning : MonoBehaviour
         {
             spawnArrows(3);
             spawnUP = false;
+        }
+        if (spawnSpace)
+        {
+            spawnArrows(4);
+            spawnSpace = false;
         }
         if (spawnTime <0.1f) {
             spawnTime = 0.1f;
@@ -102,6 +117,9 @@ public class spawning : MonoBehaviour
                     break;
                 case 2:
                     objNameSelect = "up arrow(Clone)";
+                    break;
+                case 3:
+                    objNameSelect = "space arrow(Clone)";
                     break;
                 default:
                     objNameSelect = null;
