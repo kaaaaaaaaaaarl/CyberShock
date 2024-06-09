@@ -87,7 +87,7 @@ public class LoseAndWin : MonoBehaviour
                     using (StreamWriter writer = new StreamWriter(stream)) 
                     {
                         Debug.Log("made a new file:");
-                        writer.Write("my dick wont fall off");
+                        writer.Write("");
                     }
                 }
             }

@@ -63,9 +63,10 @@ public class SelectItem : MonoBehaviour
         }else
         {
             GameObject newButton = Instantiate(UIPrefab, transform);
+            TMP_Text m_TextComponent = newButton.transform.Find("Text (TMP)").GetComponent<TMP_Text>();
+            m_TextComponent.text = "no songs are added to map-data";
         }
         
-
     }
     public void ButtonClicked(GameObject clickedButton)
     {

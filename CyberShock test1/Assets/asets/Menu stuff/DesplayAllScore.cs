@@ -60,10 +60,8 @@ public class DesplayAllScore : MonoBehaviour
             {
                 using (FileStream stream = new FileStream(filePath, FileMode.Open))
                 {
-                    //Debug.Log("Write to file:");
                     using (StreamReader reader = new StreamReader(stream))
                     {
-                        Debug.Log("Write to file:");
                         returnString = reader.ReadToEnd();
                     }
                 }

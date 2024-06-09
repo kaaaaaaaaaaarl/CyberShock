@@ -38,13 +38,11 @@ public class OpenPause : MonoBehaviour
         }
         if(isPaused){
             PlayerPrefs.SetInt("isPaused", 1);
-           // isPaused = true;
             AudioSource.Pause();
             Time.timeScale = 0;
         }
         if(MapValues.damageTaken<=1 && !isPaused){
             PlayerPrefs.SetInt("isPaused", 0);
-           // isPaused = true;
             Time.timeScale = 1;
             AudioSource.UnPause();
         }
